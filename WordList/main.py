@@ -12,7 +12,7 @@ def generator(file_path, chars, min_length, max_length, Prefix = ''):
                     file.write(word+"\n")
                     bar.next()
             elif max_length > min_length:
-                for i in range(min_length, max_length + 1):
+                for i in range(int(min_length), int(max_length) + 1):
                     for w in itertools.product(str(chars), repeat=i):
                         word = ''.join(w)
                         file.write(Prefix+word+"\n")
